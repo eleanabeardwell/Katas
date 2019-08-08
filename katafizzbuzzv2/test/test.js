@@ -23,15 +23,10 @@ describe("FizzBuzzTests", function(){
     it("Should Return List of Numbers Given FizzBuzz List", function(){
         var list1 = [1,2,"Fizz",4,"Buzz","Fizz",7,8,"Fizz","Buzz",11,"Fizz",13,14,"FizzBuzz"]
         var list2 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+        expect(FizzBuzz.reverseFizzBuzz(list1)).to.deep.equal(list2)  
         
-        /* var list2 = []
-        function createStraightList(num){
-            for (i=1; i<=num; i++){
-                list2.push(i)
-            }
-        } */
-
-        expect(FizzBuzz.reverseFizzBuzz(list1)).to.deep.equal(list2)  // want to pass function into function i.e. reverseFizzBuzz(call(15))
+        
+        // expect(FizzBuzz.reverseFizzBuzz(call(15))).to.deep.equal(createStraightList(15))  
     })
 })
 
