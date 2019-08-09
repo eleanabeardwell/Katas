@@ -1,6 +1,6 @@
 function FizzBuzzGame(){
 
-    function call(num){
+    function FizzBuzzList(num){
        var output = num;
     
         if (num % 3 === 0){
@@ -16,7 +16,7 @@ function FizzBuzzGame(){
     }
 
     return {
-        call
+        FizzBuzzList
 
     }
 }

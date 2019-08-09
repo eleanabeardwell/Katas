@@ -2,21 +2,18 @@ var RomanNumeral = require("../app")
 var expect = require("chai").expect
 
 describe("RomanNumeralTests", function() {
-
-    it("Should Return I when given 1", function(){
+    
+    it("Should Return Correct First 9 Numbers", function() {
         expect(RomanNumeral.calculator(1)).to.equal("I")
-    })
-
-    it("Should Return III when given 3", function(){
+        expect(RomanNumeral.calculator(2)).to.equal("II")
         expect(RomanNumeral.calculator(3)).to.equal("III")
-    })
-
-    it("Should Return V when given 5", function(){
+        expect(RomanNumeral.calculator(4)).to.equal("IV")
         expect(RomanNumeral.calculator(5)).to.equal("V")
-    })
-
-    it("Should Return IX when given 9", function(){
+        expect(RomanNumeral.calculator(6)).to.equal("VI")
+        expect(RomanNumeral.calculator(7)).to.equal("VII")
+        expect(RomanNumeral.calculator(8)).to.equal("VIII")
         expect(RomanNumeral.calculator(9)).to.equal("IX")
+
     })
 
 })
