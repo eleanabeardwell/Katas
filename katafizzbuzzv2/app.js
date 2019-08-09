@@ -1,6 +1,6 @@
 function FizzBuzzGame() {
 
-    function call(num){
+    function createFizzBuzzList(num){
         var array = []
         for (i=1; i<=num; i++) {
             if (isModuloZero(i,3) && isModuloZero(i,5)) {
@@ -19,7 +19,8 @@ function FizzBuzzGame() {
         return array
     }
 
-    function reverseFizzBuzz(list){
+    function reverseFizzBuzz(num){
+        var list = createFizzBuzzList(num)  
         for (i=0; i<list.length; i++) {
             if (list[i] === "Fizz") {
                 updateIndex(list,i)
@@ -29,29 +30,21 @@ function FizzBuzzGame() {
             }
             else if (list[i] === "FizzBuzz") {
                 updateIndex(list,i)
-            } else {
-                list[i] = list[i] //better way to write this?
             }
         }
         return list
-    }
-
-    function isModuloZero(a,b) {
-        return a % b === 0
     }
 
     function updateIndex(list,i) {
         list[i] = i + 1
     }
 
-    function createStraightList(num){
-        var array = []
-        for (i=1; i<=num; i++) {
-            array.push(i)
-        }
-        return array
+    function isModuloZero(a,b) {
+        return a % b === 0
     }
-    return { call, reverseFizzBuzz, createStraightList
+
+
+    return { reverseFizzBuzz, createFizzBuzzList
 
     }
 }
