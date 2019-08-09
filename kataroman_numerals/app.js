@@ -5,7 +5,11 @@ function RomanNumeralCalculator() {
         var V = "V"
         var X = "X"
         var string = ""
+
         if (num % 5 === 4) {
+            if (num >= 10) {
+                string += X
+            }
             string += I
             if ((num + 1) % 10 === 0) {
                 string += X
@@ -26,7 +30,6 @@ function RomanNumeralCalculator() {
     }
 
 return { calculator
-
 }
 }
 

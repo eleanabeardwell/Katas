@@ -9,7 +9,7 @@ function FizzBuzzGame(){
         if (num % 5 === 0) {
             output = "Buzz";
         }
-        if (num % 3 === 0 && num % 5 === 0) {
+        if (num % 15 === 0) {
             output = "FizzBuzz";
         } 
         return output;

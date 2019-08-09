@@ -3,7 +3,7 @@ function FizzBuzzGame() {
     function createFizzBuzzList(num){
         var array = []
         for (i=1; i<=num; i++) {
-            if (isModuloZero(i,3) && isModuloZero(i,5)) {
+            if (isModuloZero(i,15) {
                 array.push("FizzBuzz")
             }
             else if (isModuloZero(i,3)) {
