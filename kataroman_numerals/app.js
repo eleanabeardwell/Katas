@@ -1,43 +1,39 @@
 function RomanNumeralCalculator() {
 
-    function calculator(num){
-        var I = "I"
-        var V = "V"
-        var X = "X"
-        var L = "L"
+    function decimalToNumeral(num){
+        const numerals = [["M", 1000], ["CM", 900], ["D", 500], ["CD", 400], ["C", 100], ["XC", 90], ["L", 50], ["XL", 40], ["X", 10], ["IX", 9], ["V", 5], ["IV", 4], ["I", 1]]
+    
         var string = ""
 
-        if (num % 5 === 4) {
-            if (num >= 10) {
-                int = Math.floor(num/10)
-                string += X.repeat(int)
-            }
-            string += I
-            if ((num + 1) % 10 === 0) {
-                string += X
-            } 
-            else {
-                string += V
-            }
-            return string
-        }
-        else {
-            if (num >= 10) {
-                int = Math.floor(num/10)
-                string += X.repeat(int)
-            }
-            if (num % 10 === 1 || num % 10 === 2 || num % 10 === 3) {
-                string += I.repeat(num%10)
-            }
-            else if (num % 10 !== 0) {
-                string += V + I.repeat(num%5)
-            }
-            return string
-        }
+
+        while (num > 0) {
+            var [numeral, value] = numerals.find(([numeral, value]) => value <= num)
+            num -= value
+            string += numeral
+        } 
+        return string
     }
 
-return { calculator
+    function numeralToDecimal(numeral) {
+        const numerals = {
+            M: 1000, 
+            D: 500,
+            C: 100,
+            L: 50,
+            X: 10,
+            V: 5,
+            I: 1
+
+        }
+        for (i=0; i<numeral.length; i += 2) {
+            var left = numeral[i]
+            var right = numeral[i+1]
+            
+        }
+    }
+   return { decimalToNumeral, numeralToDecimal }
 }
-}
+
+
 
 module.exports = RomanNumeralCalculator()
