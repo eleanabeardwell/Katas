@@ -22,3 +22,7 @@ function FizzBuzzGame(){
 }
 
 module.exports = FizzBuzzGame();
+
+/*function createFizzBuzzList(num) {
+    return (num % 3 ? "" : "Fizz") + (num % 5 ? "" : "Buzz") || num; 
+}*/

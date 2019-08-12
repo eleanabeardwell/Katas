@@ -16,12 +16,8 @@ describe("RomanNumeralTests", function() {
 
     })
 
-    it("Should Return X when given 10", function() {
-        expect(RomanNumeral.calculator(10)).to.equal("X")
-    }) 
-
-    it("Should Return XIV when given 14", function(){
-        expect(RomanNumeral.calculator(14)).to.equal("XIV")
+    it("Should Return XXXIX when given 39", function() {
+        expect(RomanNumeral.calculator(39)).to.equal("XXXIX")
     })
 
 })
