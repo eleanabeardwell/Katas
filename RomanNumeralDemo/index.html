@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        #loading, #results, #d2n, #n2d {
+        display: none;
+        }
+    </style>
+    <title>Roman Numeral Calculator</title>
+</head>
+<body class="bg-dark">
+    <div class="containter">
+        <div class="row">   
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center mt-5">
+                    <h2 class="heading display-5 pd-5">Roman Numeral Calculator</h2>
+                    <form id="convert-d2n-form">
+                        <div class="form-group ">
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="decimal" placeholder="Enter Decimal Number">
+                            </div>
+                         </div>
+                        <div class="form-group">
+                            <input type="submit" value="Convert to Numeral!" class="btn btn-dark btn-block">
+                        </div>
+                    </form>
+                    <form id="convert-n2d-form">
+                            <div class="form-group ">
+                                <div class="input-group">
+                                    <input type="string" class="form-control" id="numeral" placeholder="Enter Roman Numeral">
+                                </div>
+                             </div>
+                            <div class="form-group">
+                                <input type="submit" value="Convert to Decimal!" class="btn btn-dark btn-block">
+                            </div>
+                        </form>
+                    <!-- Loader here -->
+                    <div id="loading">
+                        <img src="img/loading.gif" alt="">
+                    </div>
+                    <!-- Results -->
+                    <div id="results" class="pt-4">
+                        <h5>Results</h5>
+                        <div class="form-group" id="d2n">
+                            <div class="input-group">
+                                <span class="input-group-text">Roman Numeral</span>
+                                <input type="string" class="form-control" id="roman-numeral" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group" id="n2d">
+                            <div class="input-group">
+                                <span class="input-group-text">Decimal</span>
+                                <input type="number" class="form-control" id="converted-decimal" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
