@@ -63,6 +63,16 @@ describe("RomanNumeralTests", function() {
     it("Should Return MMDCLXXXVIII when given 2688", function(){
         expect(RomanNumeral.decimalToNumeral(2688)).to.equal("MMDCLXXXVIII")
     })
-    
+
+    it("Should Return 2999 when using numeralToDecimal on MMCMXCIX", function(){
+        expect(RomanNumeral.numeralToDecimal("MMCMXCIX")).to.equal(2999)
+    })
+
+    it("Should Return the Right Decimals for first 3000 Numerals", function(){
+        for (j=1; j<=3000; j++) {
+            const numeral = RomanNumeral.decimalToNumeral(j);
+            expect(RomanNumeral.numeralToDecimal(numeral)).to.equal(j)
+        }
+    })
 
 })
