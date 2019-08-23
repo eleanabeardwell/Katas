@@ -176,7 +176,6 @@ function PokerGame() {
     }
 
     var highCard = (A,B) => {
-
         while(A.length >= 0) {
             var maxNumA = Math.max(...A)
             var maxNumB = Math.max(...B)
