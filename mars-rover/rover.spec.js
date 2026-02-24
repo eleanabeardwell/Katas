@@ -1,4 +1,3 @@
-const { assert } = require('chai');
 const Rover = require('./rover')
 
 describe('Rover Tests', () => {
@@ -7,10 +6,10 @@ describe('Rover Tests', () => {
         rover = new Rover()
     })
     it('should throw error if not move command', () => {
-        assert.throws(() => rover.move('hello'))
+        expect(() => rover.move('hello')).toThrow()
     })
     it('should throw error if not turn command', () => {
-        assert.throws(() => rover.turn('???'))
+        expect(() => rover.turn('???')).toThrow()
     })
-    it('should ')
+    // it('should ')
 })
