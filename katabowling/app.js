@@ -1,4 +1,3 @@
-
 function bowlingGame(){
     var score = 0
     var rolls = []
